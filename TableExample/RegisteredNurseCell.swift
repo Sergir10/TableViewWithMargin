@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisteredNurseCell: UITableViewCell {
+class RegisteredNurseCell: UITableViewCell, ConfigurableCell {
 
     lazy var verticalStackView: UIStackView = {
         let stack = UIStackView()
@@ -127,6 +127,10 @@ class RegisteredNurseCell: UITableViewCell {
 
         let margins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         self.frame = self.frame.inset(by: margins)
+    }
+
+    func configure(data: Test2) {
+        print("Resistered Nurse")
     }
 
     func setupView() {

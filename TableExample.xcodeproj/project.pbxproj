@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61786EFA237D0FBC00E59444 /* TableViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61786EF9237D0FBC00E59444 /* TableViewConfigurator.swift */; };
+		61786EFC237D111E00E59444 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61786EFB237D111E00E59444 /* TableViewModel.swift */; };
 		61881058237A452B00C1501B /* WorkgroupCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61881057237A452A00C1501B /* WorkgroupCodes.swift */; };
 		6188105A237A461700C1501B /* RegisteredNurseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61881059237A461700C1501B /* RegisteredNurseCell.swift */; };
 		619F2B39237A02B900A79A1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619F2B38237A02B900A79A1E /* AppDelegate.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61786EF9237D0FBC00E59444 /* TableViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewConfigurator.swift; sourceTree = "<group>"; };
+		61786EFB237D111E00E59444 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		61881057237A452A00C1501B /* WorkgroupCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkgroupCodes.swift; sourceTree = "<group>"; };
 		61881059237A461700C1501B /* RegisteredNurseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredNurseCell.swift; sourceTree = "<group>"; };
 		619F2B35237A02B900A79A1E /* TableExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +73,8 @@
 				619F2B4C237A3E3E00A79A1E /* DetailCell.swift */,
 				61881057237A452A00C1501B /* WorkgroupCodes.swift */,
 				61881059237A461700C1501B /* RegisteredNurseCell.swift */,
+				61786EF9237D0FBC00E59444 /* TableViewConfigurator.swift */,
+				61786EFB237D111E00E59444 /* TableViewModel.swift */,
 			);
 			path = TableExample;
 			sourceTree = "<group>";
@@ -146,9 +152,11 @@
 				619F2B3D237A02B900A79A1E /* ViewController.swift in Sources */,
 				619F2B39237A02B900A79A1E /* AppDelegate.swift in Sources */,
 				619F2B4D237A3E3E00A79A1E /* DetailCell.swift in Sources */,
+				61786EFC237D111E00E59444 /* TableViewModel.swift in Sources */,
 				619F2B3B237A02B900A79A1E /* SceneDelegate.swift in Sources */,
 				61881058237A452B00C1501B /* WorkgroupCodes.swift in Sources */,
 				6188105A237A461700C1501B /* RegisteredNurseCell.swift in Sources */,
+				61786EFA237D0FBC00E59444 /* TableViewConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

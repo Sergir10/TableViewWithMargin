@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailCell: UITableViewCell {
+class DetailCell: UITableViewCell, ConfigurableCell {
 
     lazy var containerView: UIView = {
         let container = UIView()
@@ -55,6 +55,10 @@ class DetailCell: UITableViewCell {
 
         let margins = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         self.frame = self.frame.inset(by: margins)
+    }
+
+    func configure(data: Test) {
+        print("Detail cell")
     }
 
     func setupView() {

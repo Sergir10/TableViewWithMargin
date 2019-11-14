@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     let names = ["Bill Burd", "102712", "s@gm.com",]
     let sections = ["Section 1", "Section 2", "Section 3"]
 
+    let viewModel = TableViewModel()
+
     override func loadView() {
         self.view = mainView
     }
@@ -33,12 +35,18 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return viewModel.items.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! RegisteredNurseCell
+        let item = viewModel.items[indexPath.section]
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: type(of: item).reuseId)!
+        item.configure(cell: cell)
         cell.clipsToBounds = true
+
+        return cell
+
 
 //        if indexPath.row == 0 {
 //            cell.layer.cornerRadius = 10
@@ -49,8 +57,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 //            cell.layer.cornerRadius = 10
 //            cell.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
 //        }
-
-        return cell
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -105,7 +111,8 @@ class MainView: UIView {
         self.backgroundColor = .white
         self.addSubview(self.table)
         self.setupConstraints()
-        self.table.register(RegisteredNurseCell.self, forCellReuseIdentifier: "Cell")
+        self.table.register(RegisteredNurseCell.self, forCellReuseIdentifier: "RegisteredNurseCell")
+        self.table.register(DetailCell.self, forCellReuseIdentifier: "DetailCell")
     }
 
     func setupConstraints() {
